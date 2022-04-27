@@ -71,6 +71,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-v2raya安装教程" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/04/28/v2raya%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" class="article-date">
+  <time class="dt-published" datetime="2022-04-27T22:05:00.000Z" itemprop="datePublished">2022-04-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/04/28/v2raya%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">v2raya安装教程</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><strong>v2rayA的安装教程如下：</strong><br>官方网址：<a href="">https://v2raya.org/docs/prologue/installation/debian/</a></p>
+<p><strong>一、安装核心代码</strong></p>
+<p><code>curl -O https://cdn.jsdelivr.net/gh/v2rayA/v2rayA@master/install/go.sh</code></p>
+<p><code>sudo bash go.sh</code><br><strong>二、添加证书和apt源和安卓v2raya</strong></p>
+<p><code>wget -qO - https://apt.v2raya.mzz.pub/key/public-key.asc | sudo apt-key add -</code></p>
+<p><code>echo &quot;deb http://apt.v2raya.mzz.pub/ v2raya main&quot; | sudo tee</code> <code>/etc/apt/sources.list.d/v2raya.list</code></p>
+<p><code>sudo apt update</code></p>
+<p><code>sudo apt install v2raya</code><br><strong>三、通过127.0.0.1:2017进入v2rayA进行设置第一次进入需要创建密码。</strong><br>提示v2ray-core未安装的话，运行以下命令</p>
+<p><code>curl -Ls https://mirrors.v2raya.org/go.sh | sudo bash</code><br>启动 v2rayA</p>
+<p><code>sudo systemctl start v2raya.service</code><br>设置开机自动启动</p>
+<p><code>sudo systemctl enable v2raya.service</code></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/04/28/v2raya%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" data-id="cl2i4nj74000090cz001n410m" data-title="v2raya安装教程" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E6%8A%80/" rel="tag">网技</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-Ubuntu安装记录" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/04/28/Ubuntu%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" class="article-date">
@@ -283,6 +334,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/04/28/v2raya%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">v2raya安装教程</a>
+          </li>
         
           <li>
             <a href="/2022/04/28/Ubuntu%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/">Ubuntu安装记录</a>
