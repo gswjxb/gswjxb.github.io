@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="Hexo搭建完成之后，我绑定了自己的域名，但是每次hexo d部署后，打开域名总是404。Google了很多页面，都不好用，看来是人云亦云，没有解决的方法。后来看到这个哥们算是说到了点子上，按照操作后立即解决。 先要查看一下setting页面绑定域名的那一栏是不是空的，再看看github page项目上根目录下的CNAME文件应该是被删了。  CNAME文件是github page 绑定域名需要添">
+    <meta name="description" content="Hexo搭建完成之后，我绑定了自己的域名，但是每次hexo d部署后，打开域名总是404。Google了很多页面，都不好用，看来是人云亦云，没有解决的方法。 先要查看一下setting页面绑定域名的那一栏是不是空的，再看看github page项目上根目录下的CNAME文件应该是被删了。  CNAME文件是github page 绑定域名需要添加的文件，在setting页面上设置会自动生成该文件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo绑定域名后打开404解决方法">
 <meta property="og:url" content="https://gswj.in/2022/05/02/hexo404/index.html">
 <meta property="og:site_name" content="CWJ">
-<meta property="og:description" content="Hexo搭建完成之后，我绑定了自己的域名，但是每次hexo d部署后，打开域名总是404。Google了很多页面，都不好用，看来是人云亦云，没有解决的方法。后来看到这个哥们算是说到了点子上，按照操作后立即解决。 先要查看一下setting页面绑定域名的那一栏是不是空的，再看看github page项目上根目录下的CNAME文件应该是被删了。  CNAME文件是github page 绑定域名需要添">
+<meta property="og:description" content="Hexo搭建完成之后，我绑定了自己的域名，但是每次hexo d部署后，打开域名总是404。Google了很多页面，都不好用，看来是人云亦云，没有解决的方法。 先要查看一下setting页面绑定域名的那一栏是不是空的，再看看github page项目上根目录下的CNAME文件应该是被删了。  CNAME文件是github page 绑定域名需要添加的文件，在setting页面上设置会自动生成该文件。">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="c:/Users/Administrator/Desktop/23.105.220.125主机配置信息/Snipaste_2022-05-02_10-06-52.png">
 <meta property="og:image" content="c:/Users/Administrator/Desktop/23.105.220.125主机配置信息/Snipaste_2022-05-02_10-07-42.png">
 <meta property="article:published_time" content="2022-05-02T02:09:20.000Z">
-<meta property="article:modified_time" content="2022-05-02T02:19:32.100Z">
+<meta property="article:modified_time" content="2022-05-02T14:04:52.042Z">
 <meta property="article:author" content="cwj">
 <meta property="article:tag" content="网技">
 <meta name="twitter:card" content="summary">
@@ -57,9 +57,9 @@
 <body class="max-width mx-auto px3 ltr">
     
       <div id="header-post">
-  <a id="menu-icon" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="menu-icon-tablet" href="#" aria-label="القائمة"><i class="fas fa-bars fa-lg"></i></a>
-  <a id="top-icon-tablet" href="#" aria-label="الأعلى" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fas fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fas fa-chevron-up fa-lg"></i></a>
   <span id="menu">
     <span id="nav">
       <ul>
@@ -151,7 +151,7 @@
   
 
   <div class="content" itemprop="articleBody">
-    <p>Hexo搭建完成之后，我绑定了自己的域名，但是每次hexo d部署后，打开域名总是404。Google了很多页面，都不好用，看来是人云亦云，没有解决的方法。后来看到<a target="_blank" rel="noopener" href="https://cxyzjd.com/article/Belingda/100635572">这个哥们</a>算是说到了点子上，按照操作后立即解决。</p>
+    <p>Hexo搭建完成之后，我绑定了自己的域名，但是每次hexo d部署后，打开域名总是404。Google了很多页面，都不好用，看来是人云亦云，没有解决的方法。</p>
 <p>先要查看一下setting页面绑定域名的那一栏是不是空的，再看看github page项目上根目录下的CNAME文件应该是被删了。</p>
 <p><img src="C:\Users\Administrator\Desktop\23.105.220.125主机配置信息\Snipaste_2022-05-02_10-06-52.png"></p>
 <p>CNAME文件是github page 绑定域名需要添加的文件，在setting页面上设置会自动生成该文件。<br>于是查了下hexo的部署，发现当执行</p>
