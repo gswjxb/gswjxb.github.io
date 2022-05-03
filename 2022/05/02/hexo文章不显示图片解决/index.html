@@ -15,7 +15,7 @@
   
   <link rel="canonical" href="https://gswjxb.github.io/2022/05/02/hexo%E6%96%87%E7%AB%A0%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3/">
   
-  <meta name="description" content="1. 问题描述默认情况下，在 hexo 中新建一篇markdown博文，在文章中插入本地图片，再部署到 github 上面，是无法显示这些图片的。 2. 解决方法首先找到博客根目录下面的_config.yml文件，修改post_asset_folder的值为true. 接着 git bash 切换到">
+  <meta name="description" content="1. 问题描述在 hexo 中新建一篇markdown博文，在文章中插入本地图片，再部署到 github 上面，不显示图片。 2.解决方法安装插件 1$ npm install hexo-renderer-marked --save  2.再修改一下配置文件_config.yml，加入下面的配置。 ">
   
   
   <meta name="author" content="cwj">
@@ -26,14 +26,14 @@
   <meta property="og:type" content="article" />
   <meta property="og:title" content="hexo文章不显示图片解决" />
   
-  <meta property="og:description" content="1. 问题描述默认情况下，在 hexo 中新建一篇markdown博文，在文章中插入本地图片，再部署到 github 上面，是无法显示这些图片的。 2. 解决方法首先找到博客根目录下面的_config.yml文件，修改post_asset_folder的值为true. 接着 git bash 切换到">
+  <meta property="og:description" content="1. 问题描述在 hexo 中新建一篇markdown博文，在文章中插入本地图片，再部署到 github 上面，不显示图片。 2.解决方法安装插件 1$ npm install hexo-renderer-marked --save  2.再修改一下配置文件_config.yml，加入下面的配置。 ">
   
   <meta property="og:url" content="https://gswjxb.github.io/2022/05/02/hexo%E6%96%87%E7%AB%A0%E4%B8%8D%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%87%E8%A7%A3%E5%86%B3/" />
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="hexo文章不显示图片解决">
   
-  <meta name="twitter:description" content="1. 问题描述默认情况下，在 hexo 中新建一篇markdown博文，在文章中插入本地图片，再部署到 github 上面，是无法显示这些图片的。 2. 解决方法首先找到博客根目录下面的_config.yml文件，修改post_asset_folder的值为true. 接着 git bash 切换到">
+  <meta name="twitter:description" content="1. 问题描述在 hexo 中新建一篇markdown博文，在文章中插入本地图片，再部署到 github 上面，不显示图片。 2.解决方法安装插件 1$ npm install hexo-renderer-marked --save  2.再修改一下配置文件_config.yml，加入下面的配置。 ">
   
   
   
@@ -81,18 +81,18 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <style>
   a:not(.icon) {
-    text-decoration-color: #0FA0CE;
+    text-decoration-color: #FF5733;
     background-image: linear-gradient(
       to bottom,
       rgba(0, 0, 0, 0) 50%,
-      #0FA0CE 50%
+      #FF5733 50%
     );
   }
   blockquote {
-    border-left: 8px solid #0FA0CE;
+    border-left: 8px solid #FF5733;
   }
   .nanobar .bar {
-    background: #0FA0CE;
+    background: #FF5733;
   }
   .button.button-primary:hover,
   button.button-primary:hover,
@@ -104,8 +104,8 @@
   input[type="submit"].button-primary:focus,
   input[type="reset"].button-primary:focus,
   input[type="button"].button-primary:focus {
-    background-color: #0FA0CE;
-    border-color: #0FA0CE;
+    background-color: #FF5733;
+    border-color: #FF5733;
   }
   input[type="email"]:focus,
   input[type="number"]:focus,
@@ -116,7 +116,7 @@
   input[type="password"]:focus,
   textarea:focus,
   select:focus {
-    border: 1px solid #0FA0CE;
+    border: 1px solid #FF5733;
   }
 </style>
 
@@ -201,12 +201,18 @@
         <div class="trans">
             <h2>hexo文章不显示图片解决</h2>
 
-  <h2 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h2><p>默认情况下，在 hexo 中新建一篇<code>markdown博文</code>，在文章中插入本地图片，再部署到 github 上面，是无法显示这些图片的。</p>
-<h2 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2. 解决方法"></a>2. 解决方法</h2><p>首先找到博客根目录下面的<code>_config.yml</code>文件，修改<code>post_asset_folder</code>的值为<code>true</code>.</p>
-<p>接着 git bash 切换到博客根目录下面，安装第三方插件<code>hexo-asset-image</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-asset-image --save</span><br></pre></td></tr></table></figure>
+  <h2 id="1-问题描述"><a href="#1-问题描述" class="headerlink" title="1. 问题描述"></a>1. 问题描述</h2><p>在 hexo 中新建一篇<code>markdown博文</code>，在文章中插入本地图片，再部署到 github 上面，不显示图片。</p>
+<h2 id="2-解决方法"><a href="#2-解决方法" class="headerlink" title="2.解决方法"></a>2.解决方法</h2><p>安装<a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo-renderer-marked">插件</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-renderer-marked --save</span><br></pre></td></tr></table></figure>
 
-<p>接着<code>hexo new &quot;文章名&quot;</code> 新建一篇文章，会发现<code>source/_posts/</code>目录下面会生成一个和 markdown 文件同名的文件夹。再将当前这篇文章中需要插入的图片放到这个文件夹中，再到 markdown 中引用该文件夹中的图片，最后<code>hexo g</code> -&gt; <code>hexo d</code>，就可以正常的查看这些图片了。</p>
+<p>2.再修改一下配置文件_config.yml，加入下面的配置。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">marked:</span><br><span class="line">  prependRoot: true</span><br><span class="line">  postAsset: true</span><br></pre></td></tr></table></figure>
+
+<p>3.在“Blog-&gt;source”下新建”imags”文件夹。注意”imags”与”_posts”同级。</p>
+<p>4.在Typora中“文件-&gt;设置偏好-&gt;图像“。在插入图片时”复制到指定路径“设置为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">../../source/images//$&#123;filename&#125;</span><br></pre></td></tr></table></figure>
+
+<p>5.在”格式-&gt;图像-&gt;设置图片根目录“将”Blog-&gt;source”设置为根目录。</p>
 
   <p><a class="classtest-link" href="/tags/%E7%BD%91%E6%8A%80/" rel="tag">网技</a> — 2022年5月2日</p>
   
