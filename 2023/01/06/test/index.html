@@ -11,11 +11,11 @@
   <meta charset="utf-8">
 
   
-  <title>test</title>
+  <title>一台电脑搭建两个hexo站点方法</title>
   
   <link rel="canonical" href="https://gswjxb.github.io/2023/01/06/test/">
   
-  <meta name="description" content="市监时间发来看四季发  时间段放开始加个刘九玲 无偶iejfoiwejoigsjg 就是看豆福建省李开复 是假大空废旧塑料">
+  <meta name="description" content="主要解决的是rsa秘钥的问题 以下做一下成功实践的方法： 1.进入.shh目录 使用下面命令行创建新密钥： 12PLAINTEXTssh-keygen -t rsa -C &amp;quot;这里是你的第二个github账号的邮箱&amp;quot;  回车后会出现： 123PLAINTEXTGenerating ">
   
   
   <meta name="author" content="cwj">
@@ -24,16 +24,16 @@
   
   <meta property="og:site_name" content="GSWJ" />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="test" />
+  <meta property="og:title" content="一台电脑搭建两个hexo站点方法" />
   
-  <meta property="og:description" content="市监时间发来看四季发  时间段放开始加个刘九玲 无偶iejfoiwejoigsjg 就是看豆福建省李开复 是假大空废旧塑料">
+  <meta property="og:description" content="主要解决的是rsa秘钥的问题 以下做一下成功实践的方法： 1.进入.shh目录 使用下面命令行创建新密钥： 12PLAINTEXTssh-keygen -t rsa -C &amp;quot;这里是你的第二个github账号的邮箱&amp;quot;  回车后会出现： 123PLAINTEXTGenerating ">
   
   <meta property="og:url" content="https://gswjxb.github.io/2023/01/06/test/" />
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="test">
+  <meta name="twitter:title" content="一台电脑搭建两个hexo站点方法">
   
-  <meta name="twitter:description" content="市监时间发来看四季发  时间段放开始加个刘九玲 无偶iejfoiwejoigsjg 就是看豆福建省李开复 是假大空废旧塑料">
+  <meta name="twitter:description" content="主要解决的是rsa秘钥的问题 以下做一下成功实践的方法： 1.进入.shh目录 使用下面命令行创建新密钥： 12PLAINTEXTssh-keygen -t rsa -C &amp;quot;这里是你的第二个github账号的邮箱&amp;quot;  回车后会出现： 123PLAINTEXTGenerating ">
   
   
   
@@ -199,13 +199,45 @@
 </div>
 
         <div class="trans">
-            <h2>test</h2>
+            <h2>一台电脑搭建两个hexo站点方法</h2>
 
-  <p>市监时间发来看四季发 </p>
-<p>时间段放开始加个刘九玲</p>
-<p>无偶iejfoiwejoigsjg</p>
-<p>就是看豆福建省李开复</p>
-<p>是假大空废旧塑料</p>
+  <p>主要解决的是rsa秘钥的问题</p>
+<p>以下做一下成功实践的方法：</p>
+<p>1.进入.shh目录</p>
+<p>使用下面命令行创建新密钥：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line">ssh-keygen -t rsa -C &quot;这里是你的第二个github账号的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>回车后会出现：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line">Generating public/private rsa key pair.  </span><br><span class="line">Enter file in which to save the key (/c/Users/you/.ssh/id_rsa): </span><br></pre></td></tr></table></figure>
+
+<p>注意此时需要你【输入新密钥的名称】，一定要与旧密钥名称不同，之后再两次回车，新密钥创建完毕。</p>
+<p>2.配置config</p>
+<p>查看你的.ssh&#x2F;根路径下, 有没有config文件，如果没有，新创建一个config文件，不要有文件格式后缀名存在。</p>
+<p>然后编辑config文件：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line">#第一个账号，默认使用的账号，不用做任何更改</span><br><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa #这块改为秘钥路径</span><br><span class="line">	</span><br><span class="line">#第二个新账号，#&quot;xxxxxx&quot;为前缀名，可以任意设置，要记住，后面需要用到</span><br><span class="line">Host xxxxxx.github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/这里是你创建的新密钥的名称 #这里同样改为新秘钥路径</span><br></pre></td></tr></table></figure>
+
+<p>3.在第二个GitHub账户下设置SSH key</p>
+<p>GitHub账号主页，依次进入Settings —&gt; SSH and GPG keys —&gt; New SSH key，将刚复制的内容粘贴到Key那里，Title可以随便填，点击Add Key保存。</p>
+<p>4.清空本地的 SSH 缓存，添加新的 SSH 密钥 到 SSH agent中</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line">ssh-add -D</span><br><span class="line">ssh-add xxxxxx #旧密钥名称，一般是id_rsa</span><br><span class="line">ssh-add xxxxxx #新创建的密钥名称</span><br></pre></td></tr></table></figure>
+
+<p>如果执行以上命令出现错误：Could not open a connection to your authentication agent.，那么就需要先执行ssh-agent bash，再执行以上命令。</p>
+<p>5.验证配置是否成功<br>依次执行以下命令，第一个为默认ssh_key验证；第二个为新的ssh_key验证，其中“xxxxxx”为你先前在config文件中的命名</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line">ssh -T git@github.com</span><br><span class="line">ssh -T git@xxxxxxx.github.com</span><br></pre></td></tr></table></figure>
+
+<p>依次显示以下信息, 则说明配置成功：</p>
+<p>Hi 你的用户名! You’ve successfully authenticated, but GitHub does not provide shell access.</p>
+<p>6.取消全局用户名&#x2F;邮箱配置，单独设置用户名&#x2F;邮箱<br>执行如下命令，取消全局用户名和邮箱配置（如果已经设置了全局的话）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line">git config --global --unset user.name</span><br><span class="line">git config --global --unset user.email</span><br></pre></td></tr></table></figure>
+
+<p>分别进入你的两个Hexo博客.git目录下执行以下命令单独设置用户名&#x2F;邮箱：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line">git config user.name &quot;这里是用户名&quot;</span><br><span class="line">git config user.email &quot;这里是你的邮箱&quot;</span><br></pre></td></tr></table></figure>
+
+<p>如果此时报错：fatal: not in a git directory，说明你没有进入.git目录下，具体路径：deploy_git \ .git，.git目录是隐藏的，需要你设置隐藏目录可见。</p>
+<p>如果你的新hexo blog 目录下还没有这个.deploy_git文件夹的话，你需要先 hexo g —— hexo d一下，虽然会部署失败，但是这时候你的文件目录下就会生成这个文件夹了。</p>
+<p>这时在进入.git文件夹里git bash here，输入以上的代码进行设置就可以完成第二个github账号的设置了。</p>
+<p>7.hexo 配置文件修改git地址<br>打开你的第二个博客Hexo目录下的_config.yml文件，找到deploy关键字，写入以下配置并保存（这里的XXXXX就是前面提到过后面要用的名字，记得要保持一致）：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PLAINTEXT</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@xxxxxx.github.com:你的用户名/你的用户名.git #这一定要注意改为前面添加前缀名的地址</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure>
 
   <p><a class="classtest-link" href="/tags/%E7%BD%91%E6%8A%80/" rel="tag">网技</a> — 2023年1月6日</p>
   
