@@ -2,327 +2,112 @@
 <html lang="zh-CN">
 
 <head>
-
-  <!-- Minima -->
-  <!-- Hexo theme created by @adisaktijrs -->
-
-  <!-- Basic Page Needs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <head>
   <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="viggo" />
+  <title>GSWJ - 轻松随意的记录</title>
+  <meta name="keywords" content="">
+  <meta name="description" content="且放白鹿青崖间，须行即骑访名山。">
+  <link rel="shortcut icon" href="/favicon.ico">
+  
+<link rel="stylesheet" href="/css/hclonely.css">
+<link rel="stylesheet" href="//fonts.loli.net/css?family=Arimo:400,700,400italic.css">
+<link rel="stylesheet" href="/css/fonts/linecons/css/linecons.min.css">
+<link rel="stylesheet" href="/css/fonts/fontawesome/css/all.min.css">
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<link rel="stylesheet" href="/css/xenon-core.min.css">
+<link rel="stylesheet" href="/css/xenon-components.min.css">
+<link rel="stylesheet" href="/css/xenon-skins.min.css">
+<link rel="stylesheet" href="/css/nav.min.css">
 
   
-  <title>Ubuntu安装记录</title>
-  
-  <link rel="canonical" href="https://gswjxb.github.io/2022/04/28/Ubuntu%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/">
-  
-  <meta name="description" content="1、ubuntu18.04换国内源打开&amp;#x2F;etc&amp;#x2F;apt&amp;#x2F;sources.list sudo nano /etc/apt/sources.list 将原有的数据注释掉，换上国内镜像 阿里云源 12345678910deb http://mirrors.aliyun.com">
-  
-  
-  <meta name="author" content="cwj">
-  
-  
-  
-  <meta property="og:site_name" content="GSWJ" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Ubuntu安装记录" />
-  
-  <meta property="og:description" content="1、ubuntu18.04换国内源打开&amp;#x2F;etc&amp;#x2F;apt&amp;#x2F;sources.list sudo nano /etc/apt/sources.list 将原有的数据注释掉，换上国内镜像 阿里云源 12345678910deb http://mirrors.aliyun.com">
-  
-  <meta property="og:url" content="https://gswjxb.github.io/2022/04/28/Ubuntu%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" />
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ubuntu安装记录">
-  
-  <meta name="twitter:description" content="1、ubuntu18.04换国内源打开&amp;#x2F;etc&amp;#x2F;apt&amp;#x2F;sources.list sudo nano /etc/apt/sources.list 将原有的数据注释掉，换上国内镜像 阿里云源 12345678910deb http://mirrors.aliyun.com">
-  
-  
-  
-  
-  <meta name="twitter:url" content="https://gswjxb.github.io/2022/04/28/Ubuntu%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/" />
-
-  <!-- Mobile Specific Metas
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Preload fonts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="preload" href="/fonts/dm-serif-display-v4-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/fonts/inter-v2-latin-regular.woff2" as="font" type="font/woff2" crossorigin>
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-<link rel="stylesheet" href="/css/normalize.css">
-
-  
-<link rel="stylesheet" href="/css/skeleton.css">
-
-  
-<link rel="stylesheet" href="/css/custom.css">
-
-  
-<link rel="stylesheet" href="/css/prism-dark.css">
-
-  
-<link rel="stylesheet" href="/css/prism-line-numbers.css">
-
-  <!-- User css -->
-  
-  
-<link rel="stylesheet" href="/css/user.css">
-
-  
-
-  <!-- Favicon
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="/images/favicon.png">
-
-  <!-- Custom Theme Color Style
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <style>
-  a:not(.icon) {
-    text-decoration-color: #FF5733;
-    background-image: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0) 50%,
-      #FF5733 50%
-    );
-  }
-  blockquote {
-    border-left: 8px solid #FF5733;
-  }
-  .nanobar .bar {
-    background: #FF5733;
-  }
-  .button.button-primary:hover,
-  button.button-primary:hover,
-  input[type="submit"].button-primary:hover,
-  input[type="reset"].button-primary:hover,
-  input[type="button"].button-primary:hover,
-  .button.button-primary:focus,
-  button.button-primary:focus,
-  input[type="submit"].button-primary:focus,
-  input[type="reset"].button-primary:focus,
-  input[type="button"].button-primary:focus {
-    background-color: #FF5733;
-    border-color: #FF5733;
-  }
-  input[type="email"]:focus,
-  input[type="number"]:focus,
-  input[type="search"]:focus,
-  input[type="text"]:focus,
-  input[type="tel"]:focus,
-  input[type="url"]:focus,
-  input[type="password"]:focus,
-  textarea:focus,
-  select:focus {
-    border: 1px solid #FF5733;
-  }
-</style>
-
-  <!-- Google Analytics (With Privacy Settings On)
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  
-
-  
-  <script src="/js/pic.min.js" defer></script>
-  
-
-  
-
-<meta name="generator" content="Hexo 6.3.0"></head>
-
-<body>
-  <div class="container">
-    <div class="row">
-      <div>
-
-        <div class="row">
-  <div class="two columns" style="max-width: 50px">
-    <h1 class="mt-2 mode">
-      <div onclick=setDarkMode(true) id="darkBtn">🌑</div>
-      <div onclick=setDarkMode(false) id="lightBtn" class=hidden>☀️</div>
-      <script >
-        if (localStorage.getItem('preferredTheme') == 'dark') {
-          setDarkMode(true)
-        }
-        function setDarkMode(isDark) {
-          var darkBtn = document.getElementById('darkBtn')
-          var lightBtn = document.getElementById('lightBtn')
-          if (isDark) {
-            lightBtn.style.display = "block"
-            darkBtn.style.display = "none"
-            localStorage.setItem('preferredTheme', 'dark');
-          } else {
-            lightBtn.style.display = "none"
-            darkBtn.style.display = "block"
-            localStorage.removeItem('preferredTheme');
-          }
-          document.body.classList.toggle("darkmode");
-        }
-      </script>
-    </h1>
-  </div>
-
-  <div class="six columns ml-1">
-    <h1 class="mt-2">
-      GSWJ
-    </h1>
-  </div>
-
-  <div class="twelve columns">
-    <div class="row">
-      <div class="nine columns left">
-        <a href="/">Home</a>
-        
-          
-          <a href="/tags/%E9%9A%8F%E8%AE%B0" class="ml">随记</a>
-          
-        
-          
-          <a href="/tags/%E7%BD%91%E6%8A%80" class="ml">网技</a>
-          
-        
-          
-          <a href="/About" class="ml">关于</a>
-          
-        
-        
-          
-            <a href="mailto:iamchi@live.cn" target="_blank" class="ml">Email</a>
-          
-        
-      </div>
-    </div>
-    <hr style="margin-bottom: 2.6rem">
-  </div>
-</div>
-
-        <div class="trans">
-            <h2>Ubuntu安装记录</h2>
-
-  <h2 id="1、ubuntu18-04换国内源"><a href="#1、ubuntu18-04换国内源" class="headerlink" title="1、ubuntu18.04换国内源"></a>1、ubuntu18.04换国内源</h2><p>打开&#x2F;etc&#x2F;apt&#x2F;sources.list</p>
-<p><code>sudo nano /etc/apt/sources.list</code></p>
-<p>将原有的数据注释掉，换上国内镜像</p>
-<p><strong>阿里云源</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-
-<p><strong>清华源</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-
-<p><strong>中科大源</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-updates main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-backports main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-security main restricted universe multiverse</span><br><span class="line">deb-src https://mirrors.ustc.edu.cn/ubuntu/ bionic-proposed main restricted universe multiverse</span><br></pre></td></tr></table></figure>
-
-<p><strong>更改完成之后执行以下命令</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
-
-<h2 id="2、安装Chrome"><a href="#2、安装Chrome" class="headerlink" title="2、安装Chrome"></a><strong>2、安装Chrome</strong></h2><p><code>wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb</code></p>
-<p><code>sudo dpkg -i google-chrome-stable_current_amd64.deb</code></p>
-<h2 id="3、unrar解压带密码压缩包"><a href="#3、unrar解压带密码压缩包" class="headerlink" title="3、unrar解压带密码压缩包"></a><strong>3、unrar解压带密码压缩包</strong></h2><p><code>sudo unrar e -p XXXX.rar</code></p>
-<h2 id="4、切换桌面管理器"><a href="#4、切换桌面管理器" class="headerlink" title="4、切换桌面管理器"></a><strong>4、切换桌面管理器</strong></h2><p><code>sudo dpkg-reconfigure gdm3</code></p>
-<p>或</p>
-<p><code>sudo dpkg-reconfigure lightdm</code></p>
-<p>或</p>
-<p><code>sudo dpkg-reconfigure sddm</code></p>
-<h2 id="5、ubuntu升级-x2F-降级内核"><a href="#5、ubuntu升级-x2F-降级内核" class="headerlink" title="5、ubuntu升级&#x2F;降级内核"></a><strong>5、ubuntu升级&#x2F;降级内核</strong></h2><p>ubuntu内核网址</p>
-<p>首先，查看自己的grub版本:</p>
-<p><code>grub-install --version</code></p>
-<p>查看自己现有的内核版本（完全版）</p>
-<p><code>grep &#39;menuentry&#39; /boot/grub/grub.cfg</code></p>
-<p>复制上面信息中menuentry之后的单引号内的字符串</p>
-<p>修改grub，在终端中输入</p>
-<p><code>sudo nano /etc/default/grub</code></p>
-<p>将第一个GRUB_DEFAULT&#x3D;0的0修改为”Ubuntu，Linux ..-*-generic”(注意要加双引号，星号替换为内核版本号)<br>更新grub设置，在终端中输入</p>
-<p><code>sudo update-grub</code></p>
-<p>如果看到下面有</p>
-<p><em>警告： Please don’t use old title Ubuntu，Linux ..-**-generic’ for GRUB_DEFAULT,use Advanced options for Ubuntu&gt;Ubuntu，Linux ..–generic’(for versions before 2.00) or</em><br><em>&#96;gnulinux-advanced-237310b8-5d8a-4e13-bcbd-37ef97be8341&gt;gnulinux-..-</em>-generic-*<br><em>advanced-237310b8-5d8a-4e13-bcbd-37ef97be8341’ (for 2.00 or later)</em></p>
-<p>则根据之前看到的grub版本，如果大于等于2.00，则返回第四步把第三个单引号内的字符串复制粘贴。否则把第二个单引号内的字符串复制粘贴，也就是说一定要重新修改一次grub。</p>
-<p>修改完成后,再次在终端中输入</p>
-<p><code>sudo update-grub</code></p>
-<p>此时不应再看到任何警告提示，重新启动</p>
-<p><code>sudo reboot</code></p>
-<p><em>注意，我内核替换之后系统炸了，进不去，而且切换其他tty命令行执行无反应，我的办法是用ubuntu启动盘进入试用系统，然后修改系统硬盘&#x2F;etc&#x2F;default&#x2F;grub和&#x2F;boot&#x2F;grub&#x2F;grub.cfg，主要是在&#x2F;boot&#x2F;grub&#x2F;grub.cfg文件中把默认内核替换成之前系统正常可以使用的内核，然后重启就可以了。至于为啥其他tty命令行执行无反应，我也不知道。</em></p>
-<h2 id="6、安装nvidia驱动"><a href="#6、安装nvidia驱动" class="headerlink" title="6、安装nvidia驱动"></a><strong>6、安装nvidia驱动</strong></h2><p>（<a target="_blank" rel="noopener" href="https://wiki.debian.org/NvidiaGraphicsDrivers#Version_340.108_.28legacy_GPUs.29%EF%BC%89">https://wiki.debian.org/NvidiaGraphicsDrivers#Version_340.108_.28legacy_GPUs.29）</a></p>
-<p><strong>查看驱动程序包名称</strong></p>
-<p><code>sudo apt install nvidia-detect</code></p>
-<p><strong>卸载安装失败的驱动</strong></p>
-<p><code>sudo apt purge nvidia</code></p>
-<p><em>Version 340.108 (legacy GPUs)<br>For support of GeForce 8 series through GeForce 300 series GPUs. (supported devices).</em></p>
-<p><em>Add “contrib” and “non-free” components to &#x2F;etc&#x2F;apt&#x2F;sources.list, for example:</em></p>
-<p><em>Debian 10 “Buster”<br>deb <a target="_blank" rel="noopener" href="http://deb.debian.org/debian/">http://deb.debian.org/debian/</a> buster main contrib non-free<br>Update the list of available packages, then we can install the nvidia-legacy-340xx-driver package:</em></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudoapt update</span><br><span class="line">sudo apt install nvidia-legacy-340xx-driver</span><br></pre></td></tr></table></figure>
-
-<p><em>DKMS will build the nvidia module for your system, via the nvidia-legacy-340xx-kernel-dkms package.<br>After, create an Xorg server configuration file and then restart your system to enable the nouveau blacklist.</em></p>
-<p><strong>配置xorg.conf文件，使用xfce桌面环境时，未配置该项会在锁屏时出现黑屏无法唤醒</strong></p>
-<p><code>sudo nano /etc/X11/xorg.conf</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Section &quot;Module&quot;</span><br><span class="line">    Load &quot;modesetting&quot;</span><br><span class="line">EndSection</span><br><span class="line"></span><br><span class="line">Section &quot;Device&quot;</span><br><span class="line">     Identifier &quot;nvidia&quot;</span><br><span class="line">     Driver &quot;nvidia&quot;</span><br><span class="line">     BusID &quot;1:0:0&quot;</span><br><span class="line">     Option &quot;AllowEmptyInitialConfiguration&quot;</span><br><span class="line">EndSection</span><br></pre></td></tr></table></figure>
-
-<p><strong>重启完成安装</strong></p>
-
-  <p><a class="classtest-link" href="/tags/%E7%BD%91%E6%8A%80/" rel="tag">网技</a> — 2022年4月28日</p>
-  
-
-
-        </div>
-        <div class="row mt-2">
-  <h3>Search</h3>
-  <div><input id="search-text" title="search" class="search-text" type="text" placeholder="search......"></div>
-  <div style="margin-top: 1.5rem;">
-    <ul id="result"></ul>
-  </div>
-</div>
-        <div class="row mt-2">
-  
-    <div class="eight columns">
-      <p id="madewith">Made with ❤ and
-        <a class="footer-link icon" href="https://hexo.io" target="_blank" style="text-decoration: none;" rel="noreferrer" aria-label="Hexo.io">
-        <svg class="hexo svg-hov" width="14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><title>Hexo.js</title><path d="M12 .007L1.57 6.056V18.05L12 23.995l10.43-6.049V5.952L12 .007zm4.798 17.105l-.939.521-.939-.521V12.94H9.08v4.172l-.94.521-.938-.521V6.89l.939-.521.939.521v4.172h5.84V6.89l.94-.521.938.521v10.222z"/></svg>
-        </a>
-        
-    </div>
-
-    <!-- Sepcial thanks to https://simpleicons.org/ for the icons -->
-    <div class="four columns mb-3 posisi" >
-      
-      <a class="ml-0 footer-link icon" href="https://github.com/gswjxb" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="GitHub">
-        <svg class="github svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
-      </a>
-      
-
-      
-
-      
-      <a class="ml-0 footer-link icon" href="https://twitter.com/iwindow" target="_blank" style="text-decoration: none" rel="noreferrer" aria-label="Twitter">
-        <svg class="twitter svg-hov" width="18" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
-      </a>
-      
-
-      
-
-      
-
-    </div>
-  
-</div>
-
-      </div>
-
-    </div>
-
-  </div>
-  <script src="/js/nanobar.min.js"></script>
+<script src="/js/jquery-1.11.1.min.js"></script>
 
   <script>
-    var options = {
-      classname: 'nanobar',
-      id: 'myNanobar'
-    };
-    var nanobar = new Nanobar(options);
-    nanobar.go(30);
-    nanobar.go(76);
-    nanobar.go(100);
+    var userDefinedSearchData = {"custom":false,"thisSearch":"https://www.baidu.com/s?wd=","thisSearchIcon":"url(https://www.baidu.com/favicon.ico)","hotStatus":true,"data":[{"name":"百度","img":"url(https://www.baidu.com/favicon.ico)","url":"https://www.baidu.com/s?wd="}]};
+    var expandAll = false;
   </script>
+  
+<script src="/js/header.js"></script>
 
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+        
+<script src="/js/html5shiv.min.js"></script>
+
+        
+<script src="/js/respond.min.js"></script>
+
+    <![endif]-->
+  <!-- / FB Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://gswjxb.github.io/2022/04/28/Ubuntu%E5%AE%89%E8%A3%85%E8%AE%B0%E5%BD%95/index.html">
+  <meta property="og:title" content="GSWJ - 轻松随意的记录">
+  <meta property="og:description" content="且放白鹿青崖间，须行即骑访名山。">
+  <meta property="og:site_name" content="GSWJ - 轻松随意的记录">
+  
+  <meta property="og:image" content="/images/webstack_banner_cn.png">
+  
+  <!-- / Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GSWJ - 轻松随意的记录">
+  <meta name="twitter:description" content="且放白鹿青崖间，须行即骑访名山。">
+  
+  <meta name="twitter:image" content="/images/webstack_banner_cn.png">
+  
+  
+  <!-- 直接添加html内容即可 -->
+<!-- 可设置多行 -->
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+</head>
+
+
+
+
+  <footer class="main-footer sticky footer-type-1">
+  <div class="footer-inner">
+    <!-- Add your copyright text here -->
+    <p>
+      
+      &copy; 2020 - 2023
+      <a href="javascript:void(0);"><strong>cwj</strong></a> | Design by <a href="http://viggoz.com" target="_blank"><strong>Viggo</strong></a> | Power by <a href="https://hexo.io/" target="_blank"><strong>Hexo</strong></a> & <a href="https://github.com/HCLonely/hexo-theme-webstack/" target="_blank"><strong>hexo-theme-webstack</strong></a>
+    </p>
+    
+    <div class="go-up">
+      <a href="#" rel="go-top">
+        <i class="fas fa-angle-up"></i>
+      </a>
+    </div>
+  </div>
+</footer>
+</div>
+</div>
+
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/TweenMax.min.js"></script>
+<script src="/js/resizeable.min.js"></script>
+<script src="/js/joinable.js"></script>
+<script src="/js/xenon-api.min.js"></script>
+<script src="/js/xenon-toggles.min.js"></script>
+<script src="/js/xenon-custom.min.js"></script>
+
+
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script src="/js/lozad.min.js"></script>
+
+
+
+  
+  <!-- 直接添加html内容即可 -->
+<!-- 可设置多行 -->
+  
 </body>
 
 </html>
